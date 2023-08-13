@@ -24,7 +24,6 @@ export const useFilterDataHook = () => {
       }
     });
   }
-
   if (state?.rating && +state?.rating !== 0) {
     filteredMovies = filteredMovies.filter((movie) => {
       if (movie?.rating === +state?.rating) {

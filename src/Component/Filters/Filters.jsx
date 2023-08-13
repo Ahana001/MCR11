@@ -51,12 +51,21 @@ export function Filters() {
       <select
         defaultValue={state?.releaseYear}
         onChange={(e) => {
-          dispatch({
-            type: ActionTypes.SET_RELEASE_YEAR,
-            payload: {
-              releaseYear: +e.target.value,
-            },
-          });
+          if (e.target.value === "ReleaseYear") {
+            dispatch({
+              type: ActionTypes.SET_RELEASE_YEAR,
+              payload: {
+                releaseYear: e.target.value,
+              },
+            });
+          } else {
+            dispatch({
+              type: ActionTypes.SET_RELEASE_YEAR,
+              payload: {
+                releaseYear: +e.target.value,
+              },
+            });
+          }
         }}
       >
         {getYears(oldestReleaseYear).map((year) => {

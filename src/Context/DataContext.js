@@ -12,6 +12,7 @@ export function DataContextProvider({ children }) {
     const localStorageGenre = localStorage.getItem("genre");
     const localStorageReleaseYear = localStorage.getItem("releaseYear");
     const localStorageReleaseRating = localStorage.getItem("rating");
+    const localStorageReleaseSearch = null;
 
     if (!localStorageMovies) {
       const formattedMovies = movies?.map((video) => ({
@@ -62,19 +63,31 @@ export function DataContextProvider({ children }) {
         payload: { releaseYear: localStorageReleaseYear },
       });
     }
-
     if (!localStorageReleaseRating) {
       dispatch({
         type: ActionTypes.INITIAL_SET_RATING,
-        payload: {
-          rating: 0,
-        },
+        payload: { rating: 0 },
       });
       localStorage.setItem("rating", 0);
     } else {
       dispatch({
         type: ActionTypes.INITIAL_SET_RATING,
         payload: { rating: localStorageReleaseRating },
+      });
+    }
+
+    if (!localStorageReleaseSearch) {
+      dispatch({
+        type: ActionTypes.INITIAL_SET_RATING,
+        payload: {
+          search: "",
+        },
+      });
+      localStorage.setItem("search", "");
+    } else {
+      dispatch({
+        type: ActionTypes.INITIAL_SET_RATING,
+        payload: { search: localStorageReleaseSearch },
       });
     }
   }, []);

@@ -5,6 +5,8 @@ export const ActionTypes = {
   INITIAL_SET_GENRE: "INITIAL_SET_GENRE",
   INITIAL_SET_RELEASE_YEAR: "INITIAL_SET_RELEASE_YEAR",
   INITIAL_SET_RATING: "INITIAL_SET_RATING",
+  INITIAL_SET_SEARCH: "INITIAL_SET_SEARCH",
+
   SET_MOVIE_STAR: "SET_MOVIE_STAR",
   SET_MOVIE_WATCH: "SET_MOVIE_WATCH",
   SET_GENRE_FILTER: "SET_GENRE_FILTER",
@@ -49,7 +51,14 @@ export function DataReducer(state, action) {
     case ActionTypes.INITIAL_SET_RATING: {
       result = {
         ...state,
-        rating: action.payload.rating,
+        rating: action.payload.rating ?? 0,
+      };
+      break;
+    }
+    case ActionTypes.INITIAL_SET_SEARCH: {
+      result = {
+        ...state,
+        search: action.payload.search,
       };
       break;
     }
@@ -118,6 +127,8 @@ export function DataReducer(state, action) {
         ...state,
         search: action.payload.search,
       };
+      localStorage.setItem("search", action.payload.search);
+
       break;
     }
     case ActionTypes.ADD_NEW_MOVIE: {
