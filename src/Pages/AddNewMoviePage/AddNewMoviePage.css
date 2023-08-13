@@ -1,0 +1,56 @@
+.AddNewMoviePageContainer {
+  margin: 7rem 5rem 0rem;
+}
+.MovieGenre,
+.MovieTitle,
+.MovieSummary,
+.MovieDirector,
+.MovieWriter,
+.MovieCast,
+.MovieRating,
+.MovieYear,
+.MovieImageUrl {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.MovieGenre textarea,
+.MovieTitle input,
+.MovieSummary textarea,
+.MovieDirector input,
+.MovieWriter input,
+.MovieCast textarea,
+.MovieRating input,
+.MovieYear input,
+.MovieImageUrl input {
+  padding: 0.8rem 1rem;
+  font-size: 1.4rem;
+  border-radius: 0.36rem;
+  border: 0.1rem solid grey;
+}
+
+.AddNewMoviePageContainer button {
+  background-color: var(--main-color);
+  color: white;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 0.36rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.4rem;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+}
+
+.AddNewMoviePageContainer h2 {
+  font-size: 2rem;
+}
+
+.AddNewMovieForm {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 40%;
+  font-size: 1.4rem;
+}

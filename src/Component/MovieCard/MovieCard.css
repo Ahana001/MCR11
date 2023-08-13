@@ -1,0 +1,52 @@
+.MovieCardContainer {
+  width: 24rem;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  border-radius: 0.36rem;
+  border-top-left-radius: 0rem;
+  border-top-right-radius: 0rem;
+  margin-bottom: 5rem;
+  text-decoration: none;
+  color: black;
+}
+.MovieCardImageContainer {
+  width: 24rem;
+  height: 24rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
+  border-radius: 0.36rem;
+  border-bottom-left-radius: 0rem;
+  border-bottom-right-radius: 0rem;
+}
+.MovieCardImageContainer img {
+  max-width: 100%;
+  margin-top: -4rem;
+  border-radius: 0.36rem;
+  border-bottom-left-radius: 0rem;
+  border-bottom-right-radius: 0rem;
+}
+.MovieCardBodyContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: center;
+  padding: 0rem 0.8rem 1rem;
+  border-radius: 0.36rem;
+  border-top-left-radius: 0rem;
+  border-top-right-radius: 0rem;
+}
+.MovieCardBodyContainer h2 {
+  font-size: 2rem;
+  height: 4rem;
+}
+.MovieCardBodyContainer p {
+  font-size: 1.4rem;
+  height: 10rem;
+}
+.ActionButton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

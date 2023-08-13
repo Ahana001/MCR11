@@ -1,0 +1,41 @@
+.SingleMoviePageContainer {
+  margin: 7rem 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.SingleMovieContainer {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
+    rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 2rem;
+  border-radius: 0.36rem;
+  margin-top: 5rem;
+}
+.SingleMovieImageContainer img {
+  width: 36rem;
+  border-radius: 0.36rem;
+  border-top-right-radius: 0rem;
+  border-bottom-right-radius: 0rem;
+}
+.SingleMovieContainer h2 {
+  font-size: 2rem;
+}
+.SingleMovieContainer p {
+  font-size: 1.4rem;
+}
+.SingleMovieSummary {
+  max-width: 80%;
+}
+.SingleMovieDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.SingleMovieActionButton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

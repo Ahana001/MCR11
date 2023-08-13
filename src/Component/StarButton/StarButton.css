@@ -1,0 +1,10 @@
+.StarButton {
+  background-color: var(--main-color);
+  color: white;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 0.36rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.4rem;
+}

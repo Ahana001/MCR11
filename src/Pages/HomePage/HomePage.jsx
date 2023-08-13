@@ -1,7 +1,19 @@
 import "./HomePage.css";
 
-export function HomePage() {
-  // const { state, } = useContext(DataContext);
+import { Header } from "../../Component/Header/Header";
+import { Filters } from "../../Component/Filters/Filters";
+import { MoviesList } from "../../Component/MoviesList/MoviesList";
+import { useFilterDataHook } from "../../Hook/FilterDataHook";
 
-  return <h2>Home</h2>;
+export function HomePage() {
+  const filteredMovies = useFilterDataHook();
+  return (
+    <>
+      <Header />
+      <div className="HomePageContainer">
+        <Filters />
+        <MoviesList movieList={filteredMovies} />
+      </div>
+    </>
+  );
 }

@@ -1,0 +1,21 @@
+.FiltersContainer {
+  margin-top: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.AddMovieButton {
+  background-color: var(--main-color);
+  color: white;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 0.36rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.4rem;
+  text-decoration: none;
+}
+.FiltersContainer h2 {
+  font-size: 2rem;
+  text-transform: capitalize;
+}
